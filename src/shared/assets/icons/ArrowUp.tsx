@@ -1,7 +1,7 @@
 import {Component} from "react";
 
 
-export class ArrowUp extends Component<any, any> {
+export class ArrowUp extends Component {
 
     render() {
         return (

@@ -71,7 +71,7 @@ class Main extends Component<Props, State> {
                     <Error error={error}>
                         <Loading loading={loading} title={'комментариев'}>
                             <MainList
-                                renderDataPage={renderComments}
+                                renderComments={renderComments}
                             />
                             {Object.keys(comments).length !== 0 && Object.keys(comments[language]).length > 10 &&
                                 <Pagination

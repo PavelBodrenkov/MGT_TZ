@@ -1,6 +1,6 @@
 import {Component} from "react";
 
-export class ArrowDown extends Component<any, any> {
+export class ArrowDown extends Component {
 
     render() {
         return (
