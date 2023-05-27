@@ -50,5 +50,4 @@ export const renderPaginate = (totalCount: number,
         let middleRange = range(leftSiblingIndex, rightSiblingIndex);
         return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];
     }
-
 }

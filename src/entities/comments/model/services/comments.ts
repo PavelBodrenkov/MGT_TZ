@@ -5,11 +5,10 @@ const getComments = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const response = await fetch('http://localhost:3000/JSON/data.json')
-
             const tmpData = await response.json()
 
-            let countRu = Object.keys(tmpData['ru']).length -1
-            let countEn = Object.keys(tmpData['en']).length -1
+            let countRu = Object.keys(tmpData['ru']).length
+            let countEn = Object.keys(tmpData['en']).length
 
             return {
                 comments:tmpData,
@@ -18,7 +17,7 @@ const getComments = createAsyncThunk(
             }
         } catch (e: any) {
             return thunkAPI.rejectWithValue({
-                message: 'Ошибка получения данных'
+                message: 'Ошибка получения комментариев'
             })
         }
     }
