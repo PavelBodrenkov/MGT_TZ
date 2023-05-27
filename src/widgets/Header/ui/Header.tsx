@@ -62,7 +62,7 @@ class Header extends Component<Props, State> {
     }
 
     render() {
-        const {title, language} = this.state
+        const {title, language, isOpenDropdown} = this.state
         return (
             <header className={cls.header}>
                 <div className={classNames(cls.wrapper, {}, [cls.container])}>
@@ -71,7 +71,7 @@ class Header extends Component<Props, State> {
                             <img src={LOGO} alt={'logo'}/>
                         </div>
                         <Dropdown
-                            isOpen={this.state.isOpenDropdown}
+                            isOpen={isOpenDropdown}
                             title={title}
                             list={language}
                             toggleItem={this.toggleSelected}

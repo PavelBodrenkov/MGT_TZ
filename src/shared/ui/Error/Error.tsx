@@ -12,11 +12,12 @@ export class Error extends Component<Props, {}> {
     }
 
     render() {
+        const {error, children} = this.props
         return (
             <>
-                {this.props.error ?
-                    <div>{this.props.error}</div> :
-                    this.props.children
+                {this.props.error
+                    ? <div>{error}</div>
+                    : children
                 }
             </>
         )

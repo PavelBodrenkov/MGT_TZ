@@ -26,11 +26,11 @@ const commentsSlice = createSlice({
                 state.isLoading = true
             })
             .addCase(getComments.fulfilled, (state, action:{payload:actionComments}) => {
-                state.isLoading = false
-                state.error = ''
                 state.comments = action.payload.comments
                 state.counts.en = action.payload.countEn
                 state.counts.ru = action.payload.countRu
+                state.isLoading = false
+                state.error = ''
             })
             .addCase(getComments.rejected, (state, action: any) => {
                 state.isLoading = false

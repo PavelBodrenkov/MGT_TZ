@@ -17,9 +17,9 @@ export class Loading extends Component<Props, {}> {
         const {children, loading} = this.props
         return (
             <>
-                {loading ?
-                    <div>{`Загрузка ${this.props.title}...`}</div> :
-                   children
+                {loading
+                    ? <div>{`Загрузка ${this.props.title}...`}</div>
+                    : children
                 }
             </>
         )

@@ -49,5 +49,4 @@ export class Dropdown extends Component<Props, State> {
             </div>
         )
     }
-
 }
