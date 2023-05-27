@@ -1,10 +1,17 @@
 import {Component} from "react";
 import cls from './Watch.module.scss';
 
-export class Watch extends Component<any, any> {
-    constructor(props: any) {
+interface Props {}
+interface State {
+    time:string
+}
+
+export class Watch extends Component<Props, State> {
+    private timerHandle: any
+    constructor(props: Props) {
         super(props);
         this.state = {time:''}
+        this.timerHandle = null
         this.timer = this.timer.bind(this)
     }
 
@@ -16,13 +23,18 @@ export class Watch extends Component<any, any> {
         this.setState({
             time: ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2)
         })
+        this.timerHandle = 0;
     }
 
     componentDidMount() {
         this.timer()
-        const timer = setInterval(this.timer, 1000);
-        return () => {
-            clearInterval(timer)
+        this.timerHandle = setInterval(this.timer, 1000);
+    }
+
+    componentWillUnmount() {
+        if(this.timerHandle) {
+            clearInterval(this.timerHandle)
+            this.timerHandle = 0
         }
     }
 

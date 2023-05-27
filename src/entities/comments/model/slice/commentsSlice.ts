@@ -33,7 +33,6 @@ const commentsSlice = createSlice({
                 state.counts.ru = action.payload.countRu
             })
             .addCase(getComments.rejected, (state, action: any) => {
-                console.log(action.payload)
                 state.isLoading = false
                 state.error = action.payload.message
             })

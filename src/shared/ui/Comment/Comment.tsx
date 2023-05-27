@@ -8,7 +8,7 @@ interface Props {
 }
 
 export class Comment extends Component<Props, {}> {
-    constructor(props:any) {
+    constructor(props:Props) {
         super(props);
         this.renderName = this.renderName.bind(this)
     }
