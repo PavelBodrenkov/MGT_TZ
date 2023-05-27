@@ -1,0 +1,39 @@
+.ddWrapper {
+  background-color: #FFF;
+  padding: 5px;
+  //border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.ddHeader {
+  display: flex;
+  align-items: center;
+}
+
+.ddTitle {
+  font-size: 15px;
+  font-family: sans-serif;
+  width: 40px;
+}
+.ddList {
+  position: absolute;
+  bottom:-58px;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+
+.ddListItem {
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: #bfbfbf;
+  padding: 5px;
+}
+
+.active {
+  background-color: #91d5ff;
+}

@@ -1,0 +1,10 @@
+@import "reset";
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+.app {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
