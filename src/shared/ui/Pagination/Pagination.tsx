@@ -72,32 +72,6 @@ export class Pagination extends Component<PaginationProps, {}> {
                     {'>'}
                 </li>
             </ul>
-            // <div
-            //     className={cls.paginator}
-            // >
-            //     <button
-            //         className={cls.arrow}
-            //         type="button"
-            //         onClick={this.handlePrevPageClick}
-            //         disabled={disable.left}
-            //     >
-            //         {'<'}
-            //     </button>
-            //     {nav && (
-            //         <span className={cls.navigation} >
-            //             {nav.current} / {nav.total}
-            //         </span>
-            //     )}
-            //     <button
-            //         className={cls.arrow}
-            //         type="button"
-            //         onClick={this.handleNextPageClick}
-            //         disabled={disable.right}
-            //     >
-            //         {'>'}
-            //     </button>
-            // </div>
-
         )
     }
 }
